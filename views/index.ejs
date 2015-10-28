@@ -7,5 +7,19 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <form action="/user">　
+        名前 <input type="text"><br>
+        E-mail<input type="email"><br>
+        password<input type="password"><br>
+        <button type="submit">登録</button>
+    </form>
+    <script type="text/javascript">
+$.ajax({
+    url: '/user'
+})
+.done(function(data) {
+    console.log(data);
+});
+    </script>
   </body>
 </html>
